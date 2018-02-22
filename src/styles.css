@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
+
+.heading{
+    margin-top: 1.6rem;  
+}
+.subheading{
+    margin-top: 2rem;
+    font-weight: 300;
+    color:white;
+}
+
+body{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.274),rgba(0, 0, 0, 0.505)),url("./header-background.jpg");
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.container {
+    color:#cacacc
+}
+
+
+.smallerImg{
+    width: 14%;
+    display: block;
+    margin-top: 2.5rem;
+}
+
+.fa-linkedin {
+    margin-right: 2rem;
+}
+
+.fa-codepen{
+    margin-left: 2rem;
+}
+
+.fa-github:before {
+    color:white;
+}
+
+i:hover{
+   cursor: pointer;
+   color:white; 
+}
+
+a:hover{
+    color:white;
+}
+
+.changelogContent{
+    padding: 0.4rem 0;
+}
+
+.speakerBio{
+    background: #2f313b;
+    color: white;
+    line-height: 1.8rem;
+
+}
+
+

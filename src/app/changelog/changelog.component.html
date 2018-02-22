@@ -1,0 +1,10 @@
+<ul>
+  <li class="mb-3 changelogContent">
+    <div>{{change.month + ':'+' '+ change.year}} </div>
+    <div>{{change.highlight}}
+      <i class="fa fa-plus ml-2" (mouseenter)="change.showDetails=true;" (mouseleave)="change.showDetails=false;">
+      </i>
+    </div>
+    <div class="changelogContent" [@fadeInOut] *ngIf="change.showDetails">{{change.details}}</div>
+  </li>
+</ul>
