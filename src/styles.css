@@ -7,7 +7,7 @@
 }
 
 .heading{
-    margin-top: 5rem;  
+    margin-top: 7rem;  
 }
 .subheading{
     margin-top: 2rem;
@@ -130,6 +130,21 @@ a{
 
 
    @media only screen and (max-width : 690px) {
+
+    body{
+        background-image:linear-gradient(rgba(0, 0, 0, 0.274),rgba(0, 0, 0, 0.505)),url("./header-background.jpg"); */
+        background-position: center;
+       background-size:cover;
+       background-attachment: fixed;
+    }
+
+    .header-overlay{
+        display: none;
+    }
+
+    .fullscreen-video-wrap{
+        display: none;
+    }
  .ml-5{
      margin-left: 0rem!important;
  }
