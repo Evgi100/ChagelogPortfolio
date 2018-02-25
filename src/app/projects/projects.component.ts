@@ -3,10 +3,10 @@ import { Projects } from '../../model'
 
 @Component({
     selector: 'portfolio-projects',
-    templateUrl: '/projects.component.html'
+    templateUrl: './projects.component.html'
 })
 
 
 export class PortfolioProjectsComponent {
-    @Input() public project: Projects
+    @Input() public project: Projects;
 }

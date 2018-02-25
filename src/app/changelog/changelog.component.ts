@@ -19,10 +19,10 @@ import { Changelog } from '../../model'
 export class ChangelogComponent {
 
   @Input() public change: Changelog
-  public showChanges: boolean = true;
+  public showChanges = true;
 
   public toggleChanges(): void {
-    this.showChanges = !this.showChanges
+    this.showChanges = !this.showChanges;
   }
 
 }
