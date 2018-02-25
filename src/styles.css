@@ -2,8 +2,12 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.css";
 
+*{
+    box-sizing: border-box;
+}
+
 .heading{
-    margin-top: 1.6rem;  
+    margin-top: 5rem;  
 }
 .subheading{
     margin-top: 2rem;
@@ -12,30 +16,31 @@
 }
 
 body{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.274),rgba(0, 0, 0, 0.505)),url("./header-background.jpg");
-    background-position: center;
+    /* background-image:linear-gradient(rgba(0, 0, 0, 0.274),rgba(0, 0, 0, 0.505)),url("./header-background.jpg"); */
+    /* background-position: center;
     background-size:cover;
-    background-attachment: fixed;
-    height: 100vh;
-}
-
-.container {
-    color:#cacacc
+    background-attachment: fixed; */
+    color:#e6e6e6;
+    line-height: 1.5;
+    overflow-x: hidden;
 }
 
 
 .smallerImg{
-    width: 14%;
+    width:9%;
     display: block;
     margin-top: 2.5rem;
+    /* opacity: 0.8; */
+    filter: brightness(70%)
 }
 
 .fa-linkedin {
     margin-right: 2rem;
 }
 
-.fa-codepen{
+.fa-codepen:before{
     margin-left: 2rem;
+    color:#bfbfbf;
 }
 
 .fa-github:before {
@@ -51,6 +56,10 @@ a:hover{
     color:white;
 }
 
+a{
+    font-size:large;
+}
+
 .changelogContent{
     padding: 0.4rem 0;
 }
@@ -59,7 +68,86 @@ a:hover{
     background: #2f313b;
     color: white;
     line-height: 1.8rem;
+    font-size: 1.1rem;
 
 }
 
+/* ------------Video background ----- */
 
+
+.v-header{
+    height:100vh;
+    width: 100vw;
+    display:flex;
+    align-items:center;
+  }
+  
+   .container{
+    max-width:100%;
+    max-height: 100%;
+    height: 100vh;
+    width: 100vw;
+    padding-left:1rem;
+    padding-right:1rem;
+    margin:auto;
+  } 
+  
+  .fullscreen-video-wrap{
+    position:fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    top:0;
+    left:0;
+    /* width:100vw;
+    height:100vh; */
+  }
+  
+  .fullscreen-video-wrap video{
+    min-height:100%;
+    min-width:100%;
+  }
+  
+  .header-overlay{
+    height:100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    z-index:1;
+    background:#000508e3;
+    opacity:0.95;
+  }
+  
+  .header-content{
+    position: relative;
+    top:0;
+    width:100vw;
+    z-index:2;
+  }
+  
+
+
+   @media only screen and (max-width : 690px) {
+ .ml-5{
+     margin-left: 0rem!important;
+ }
+
+ .mb-5{
+     margin-bottom: 0rem!important;
+ }
+    
+    .smallerImg{
+        width: 16%;
+        display: block;
+        margin-top: 2.5rem;
+        /* opacity: 0.8; */
+        filter: brightness(70%)
+    }
+
+    .heading{
+        margin-top: 3rem ;
+    }
+
+   }

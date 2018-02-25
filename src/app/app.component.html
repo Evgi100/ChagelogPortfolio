@@ -1,51 +1,58 @@
-<div class="container">
-    <span class="text-center">
-        <h1 class="heading">{{portfolio.firstName+' '+portfolio.lastName}}</h1>
-        <h3 class="subheading">{{portfolio.subheading}}</h3>
-        <img class="rounded-circle mx-auto smallerImg" src="../assets/img/Profile picture.jpg" alt="Profile Picture">
-    </span>
-    <div class="row justify-content-center mt-5 mb-3">
-        <a [href]="social.link" class="p-2" target="blank" *ngFor="let social of portfolio.socialMedia">
-            <i [class]="social.icon" [style.color]="social.color"></i>
-        </a>
+<div class="v-header container">
+    <div class="fullscreen-video-wrap">
+        <video src="https://production.cdmycdn.com/assets/marketing-pages/intensives/bws/coding-scenes-9a2031e8142b40bdb5d936d5eef33dfa.mp4"
+            autoplay="" loop="">
+        </video>
     </div>
+    <div class="header-overlay"></div>
+    <div class="header-content">
+        <span class="text-center" >
+            <h1 class="heading">{{portfolio.firstName+' '+portfolio.lastName}}</h1>
+            <h3 class="subheading">{{portfolio.subheading}}</h3>
+            <img class="rounded-circle mx-auto smallerImg" src="../assets/img/Profile picture.jpg" alt="Profile Picture">
+        </span>
+        <div class="row justify-content-center mt-5 mb-3">
+            <a [href]="social.link" class="p-2" target="blank" *ngFor="let social of portfolio.socialMedia">
+                <i [class]="social.icon" [style.color]="social.color"></i>
+            </a>
+        </div>
 
-    <div>
-        <h3 class="mb-3">
-            <i (click)="toggleOpen('expandLog')" *ngIf="logOpen;else logExpanded" class="fa fa-plus"></i> Changelog
-            <ng-template #logExpanded>
-                <i (click)="toggleOpen('expandLog')" class="fa fa-minus"></i>
-            </ng-template>
-        </h3>
-        <h5>{{portfolio.introduction}}</h5>
-        <div *ngIf="!logOpen" [@fadeInOut]>
-            <app-changelog  [ngStyle]="{'color':change.color}" *ngFor="let change of portfolio.changelog"
-            [change]="change" ></app-changelog>
+        <div class="ml-5 mb-5">
+            <h3 class="mb-3">
+                <i (click)="toggleOpen('expandLog')" *ngIf="logOpen;else logExpanded" class="fa fa-plus"></i> Changelog
+                <ng-template #logExpanded>
+                    <i (click)="toggleOpen('expandLog')" class="fa fa-minus"></i>
+                </ng-template>
+            </h3>
+            <h6 class="ml-5 mt-4" >{{portfolio.introduction}}</h6>
+            <div *ngIf="!logOpen" [@fadeInOut]>
+                <app-changelog [ngStyle]="{'color':change.color}" *ngFor="let change of portfolio.changelog" [change]="change"></app-changelog>
+            </div>
         </div>
-    </div>
-    <div>
-        <h3 class=" mt-3 mb-3">
-            <i (click)="toggleOpen('expandUpdates')" *ngIf="updatesOpen;else updatesExpanded" class="fa fa-plus"></i> Projects
-            <ng-template #updatesExpanded>
-                <i (click)="toggleOpen('expandUpdates')" class="fa fa-minus"></i>
-            </ng-template>
-        </h3>
-        <h6>Here's a selection of projects I've worked on. They include Angular/React single page apps and responsive styled
-            web sites </h6>
-        <div *ngIf="!updatesOpen" [@fadeInOut]>
-            <portfolio-projects *ngFor="let project of portfolio.projects" [project]="project"></portfolio-projects>
+        <div class="ml-5 mb-5 ">
+            <h3 class=" mt-3 mb-3">
+                <i (click)="toggleOpen('expandUpdates')" *ngIf="updatesOpen;else updatesExpanded" class="fa fa-plus"></i> Projects
+                <ng-template #updatesExpanded>
+                    <i (click)="toggleOpen('expandUpdates')" class="fa fa-minus"></i>
+                </ng-template>
+            </h3>
+            <h6 class="ml-5 mb-4 mt-4">Here's a selection of projects I've worked on. They include Angular & React single page apps and responsive styled
+                web sites </h6>
+            <div *ngIf="!updatesOpen" [@fadeInOut]>
+                <portfolio-projects *ngFor="let project of portfolio.projects" [project]="project"></portfolio-projects>
+            </div>
         </div>
-    </div>
-    <div>
-        <h3 class=" mt-3 mb-3">
-            <i (click)="toggleOpen('expandBio')" *ngIf="bioOpen;else bioExpanded" class="fa fa-plus"></i> Speaker Bio
-            <ng-template #bioExpanded>
-                <i (click)="toggleOpen('expandBio')" class="fa fa-minus"></i>
-            </ng-template>
-        </h3>
-        <div *ngIf="!bioOpen" [@fadeInOut] class="p-5 mb-5 speakerBio">
-            {{portfolio.speakerBio}}
+        <div class="ml-5 ">
+            <h3 class=" mt-3 mb-3">
+                <i (click)="toggleOpen('expandBio')" *ngIf="bioOpen;else bioExpanded" class="fa fa-plus"></i> Speaker Bio
+                <ng-template #bioExpanded>
+                    <i (click)="toggleOpen('expandBio')" class="fa fa-minus"></i>
+                </ng-template>
+            </h3>
+            <div *ngIf="!bioOpen" [@fadeInOut] class="p-5 mb-5 speakerBio">
+                {{portfolio.speakerBio}}
+            </div>
         </div>
+        <h5 class="mt-4 ml-5 mb-5">You can contact me at any of my social media platforms or email me at evgeni.shapira@gmail.com</h5>
     </div>
-    <h6>You can contact me at any of my social media platforms or email me at evgeni.shapira@gmail.com</h6>
 </div>

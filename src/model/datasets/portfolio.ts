@@ -19,7 +19,7 @@ export const PortfolioData: Portfolio = {
         link: 'https://codepen.io/Eugene100/',
         color: '#663300'
     }],
-    introduction: `I have vast experience solving problems and programming automation solutions`,
+    introduction: `Full Stack Web Developer. With over 6 years of experience working in the Financial indusrty solving problems and creating various solutions using Advanced Excel and VBA. `,
     changelog: [
         {
             color: '#33ff33',
@@ -29,7 +29,7 @@ export const PortfolioData: Portfolio = {
             details: `3-month intensive (50+ hours/week) hands on coding bootcamp.  During the bootcamp, I gained experience building individual and team-based full-stack web applications. The course emphasis was on becoming a full-stack programmer using the MEAN stack, and REACT.`
         },
         {
-            color: '#4d4dff',
+            color: '#33adff',
             month: 'January-December',
             year: 2016,
             highlight: 'Risk Management Analyst at Meitav Dash ',
@@ -44,7 +44,7 @@ export const PortfolioData: Portfolio = {
 
         },
         {
-            color: '#4d4dff',
+            color: '#33adff',
             month: 'January-December',
             year: 2011,
             highlight: 'MBA, Finance and Economics',

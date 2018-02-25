@@ -7,11 +7,11 @@ import { Portfolio, PortfolioData } from '../model'
   styleUrls: ['./app.component.css'],
   animations: [
     trigger('fadeInOut', [
-      transition(":enter", [
+      transition(':enter', [
         style({ opacity: 0 }),
         animate(500, style({ opacity: 1 }))
       ]),
-      transition(":leave", [
+      transition(':leave', [
         animate(500, style({ opacity: 0 }))
       ])
     ])
@@ -20,30 +20,30 @@ import { Portfolio, PortfolioData } from '../model'
 export class AppComponent implements OnInit {
 
   public portfolio: Portfolio;
-  public logOpen: boolean = true;
-  public updatesOpen: boolean = true;
-  public bioOpen: boolean = true;
+  public logOpen = true;
+  public updatesOpen = true;
+  public bioOpen = true;
 
 
 
   public ngOnInit(): void {
-    this.portfolio = PortfolioData
+    this.portfolio = PortfolioData;
   }
 
   public toggleOpen(event): void {
     switch (event) {
       case 'expandLog':
-        this.logOpen = !this.logOpen
+        this.logOpen = !this.logOpen;
         break;
       case 'expandUpdates':
-        this.updatesOpen = !this.updatesOpen
+        this.updatesOpen = !this.updatesOpen;
         break;
       case 'expandBio':
-        this.bioOpen = !this.bioOpen
+        this.bioOpen = !this.bioOpen;
         break;
     }
   }
 }
 
-// When the function is not returning anything then 
+// When the function is not returning anything then
 // void is what we use to let typescript check it for us

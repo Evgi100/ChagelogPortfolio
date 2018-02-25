@@ -2,9 +2,13 @@
   <li class="mb-3 changelogContent">
     <div>{{change.month + ':'+' '+ change.year}} </div>
     <div>{{change.highlight}}
-      <i class="fa fa-plus ml-2" (mouseenter)="change.showDetails=true;" (mouseleave)="change.showDetails=false;">
+      <i class="fa fa-plus ml-2" *ngIf="showChanges ;else expandChanges" (click)="toggleChanges()">
       </i>
+      <ng-template #expandChanges>
+        <i (click)="toggleChanges()" class="fa fa-minus"></i>
+      </ng-template>
     </div>
-    <div class="changelogContent" [@fadeInOut] *ngIf="change.showDetails">{{change.details}}</div>
+
+    <div *ngIf="!showChanges" class="changelogContent" [@fadeInOut]>{{change.details}}</div>
   </li>
 </ul>
